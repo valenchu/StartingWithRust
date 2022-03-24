@@ -31,8 +31,14 @@ fn main() {
     let hello = String::from("Olá");
     let hello = String::from("Здравствуйте");
     let hello = String::from("Hola");
-    println!("Yo digo: {} en español",hello)
-  
-    
-
+    println!("Yo digo: {} en español",hello);
+    //Generate a tuple una tupla es un conjunto de elemento como un array
+    let generacionOfTubpla = ("Hola","Mi nombre es", "Valentin", "y tengo", 18i32, "años", "this is ",true);
+    println!("{} {} {} {} {} {} {} {}",generacionOfTubpla.0,generacionOfTubpla.1,generacionOfTubpla.2,generacionOfTubpla.3,generacionOfTubpla.4,generacionOfTubpla.5,generacionOfTubpla.6,generacionOfTubpla.7);
+    //El struc clasico es como un tipo de keyMap por cada campo le corresponde un tipo de campo deseado
+    struct enemigo {name: String, level: u8, strong: bool}
+    //Tuple Struct es similar al de arriba pero la diferencia es que este no posee nombre de campo se indexa
+    struct typeOfEnemies (String, String, String, f32);
+    //Unic struct se usa como marcadores en el tutorial de microsoft aun no explica como funciona
+    struct unicStruct;
 }
