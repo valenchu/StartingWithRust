@@ -35,10 +35,23 @@ fn main() {
     //Generate a tuple una tupla es un conjunto de elemento como un array
     let generacionOfTubpla = ("Hola","Mi nombre es", "Valentin", "y tengo", 18i32, "años", "this is ",true);
     println!("{} {} {} {} {} {} {} {}",generacionOfTubpla.0,generacionOfTubpla.1,generacionOfTubpla.2,generacionOfTubpla.3,generacionOfTubpla.4,generacionOfTubpla.5,generacionOfTubpla.6,generacionOfTubpla.7);
-    //El struc clasico es como un tipo de keyMap por cada campo le corresponde un tipo de campo deseado
+    //El struct clasico es como un tipo de keyMap por cada campo le corresponde un tipo de campo deseado
     struct enemigo {name: String, level: u8, strong: bool}
     //Tuple Struct es similar al de arriba pero la diferencia es que este no posee nombre de campo se indexa
     struct typeOfEnemies (String, String, String, f32);
     //Unic struct se usa como marcadores en el tutorial de microsoft aun no explica como funciona
     struct unicStruct;
+    //Para instanciar los campos de un struct clasic usamos el nombre del struct dos puntos y insertamos el tipo de dato solicitado
+    //todo esto lo almacenamos en una variable let ejeplo a continuacion.
+    let termineitor = enemigo {name: String::from("TermineitorR14"), level: 27, strong: true};
+    //Ahora crearemos el struct tuple que contiene solo los datos sin un campo key
+    let malo = typeOfEnemies(String::from("Es malo"), String::from("Tiene fuerza bruta"), String::from("Ojo bionico"), 1.75);
+    //Ahora pasare a imprimir los datos
+    println!("------------DATA------------");
+    println!("DATOS DEL ENEMIGO: ");
+    println!("NOMBRE: {} NIVEL: {} ES FUERTE?: {}", termineitor.name, termineitor.level, termineitor.strong);
+    println!();
+    println!("CARACTERISTICAS DEL ENEMIGO:");
+    println!("{}: {} {}: {} {}: {} {} mide: {}",termineitor.name,malo.0,termineitor.name,malo.1,termineitor.name,malo.2,termineitor.name,malo.3);
+   //Como ves el String::from se usa para convertir el str a Typo String
 }
